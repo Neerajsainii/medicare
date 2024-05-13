@@ -1,13 +1,22 @@
 {
-    "builds": [{
+    "builds": [
+      {
         "src": "medicare/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "medicare/wsgi.py"
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
+        },
+        "env": {
+          "PYTHONUSERBASE": "./python_modules"
         }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "medicare/wsgi.py"
+      }
     ]
-}
+  }
+  
