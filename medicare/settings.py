@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-vhk^tt=f!=@j=g(rrib0mp*l5$xi1173mwr0656*jpf!9tye%p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,14 +75,14 @@ WSGI_APPLICATION = "medicare.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "medicare",
-        "USER": "postgres",
-        "PASSWORD":"123456"
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "medicare",
+#         "USER": "postgres",
+#         "PASSWORD":"123456"
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
