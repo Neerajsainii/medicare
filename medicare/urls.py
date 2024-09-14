@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.conf.urls import handler404  
 from medicare import views
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    # path("admin/", admin.site.urls),
     path("", views.home),
     path("info/", views.info),    
     path('symptom/', views.symptom,name='symptom'),
