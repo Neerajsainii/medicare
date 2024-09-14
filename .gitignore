@@ -1,15 +1,27 @@
-.vercel
-*.log
+# Python
 *.pyc
-__pycache__
-db.sqlite3
-media
+__pycache__/
 
-# Environments 
-.env 
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
+# Virtual environment
+venv/
+myenv/
+
+# Django stuff
+db.sqlite3
+*.log
+
+# Environment variables
+.env
+
+# Static files
+staticfiles/
+static/
+media/
+
+# IDE files (optional, depending on your setup)
+.vscode/
+.idea/
+*.swp
+
+# macOS specific (optional)
+.DS_Store
