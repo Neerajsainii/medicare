@@ -15,7 +15,7 @@ db.sqlite3
 
 # Static files
 staticfiles/
-static/
+# static/
 media/
 
 # IDE files (optional, depending on your setup)
