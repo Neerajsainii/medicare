@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "medicare",
-    "user"
+    # "user"
 ]
 
 MIDDLEWARE = [
@@ -75,14 +75,14 @@ WSGI_APPLICATION = "medicare.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "medicare",
-#         "USER": "postgres",
-#         "PASSWORD":"123456"
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "medicare",
+        "USER": "postgres",
+        "PASSWORD":"123456"
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

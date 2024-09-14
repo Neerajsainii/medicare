@@ -1,17 +1,17 @@
 from django.contrib import admin
 from django.urls import path
-from django.contrib.auth.decorators import login_required
-from django.conf.urls import handler404  
-from medicare import views
+# from django.contrib.auth.decorators import login_required
+# from django.conf.urls import handler404  
+# from medicare import views
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.home),
-    path("info/", views.info),    
-    path('symptom/', views.symptom,name='symptom'),
-    path('disease/', views.process_symptom, name='disease'),
-    path('get_suggestions/', views.get_suggestions, name='get_suggestions'),
-    path('get_symptoms/<int:disease_id>/', views.get_symptoms,name='get_symptoms'),
-    path('medicine/<int:disease_id>/', views.treatment, name='medicine'),
+    # path("", views.home),
+    # path("info/", views.info),    
+    # path('symptom/', views.symptom,name='symptom'),
+    # path('disease/', views.process_symptom, name='disease'),
+    # path('get_suggestions/', views.get_suggestions, name='get_suggestions'),
+    # path('get_symptoms/<int:disease_id>/', views.get_symptoms,name='get_symptoms'),
+    # path('medicine/<int:disease_id>/', views.treatment, name='medicine'),
     
 
 ]
