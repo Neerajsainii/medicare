@@ -4,6 +4,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+.venv/
 myenv/
 
 # Django stuff
@@ -12,7 +13,7 @@ db.sqlite3
 
 # Environment variables
 .env
-
+.venv
 # Static files
 # staticfiles/
 # static/
