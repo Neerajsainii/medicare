@@ -14,9 +14,9 @@ db.sqlite3
 .env
 
 # Static files
-staticfiles/
+# staticfiles/
 # static/
-media/
+# media/
 
 # IDE files (optional, depending on your setup)
 .vscode/
