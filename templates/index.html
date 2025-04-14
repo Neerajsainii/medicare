@@ -1,447 +1,123 @@
-<!-- {% load static %} -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
-    <style>
-        *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* ##################################################################### HEADER ######################################################### */
-.nav-item {
-    color: black;
-    text-decoration: none;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #0000009f;
-    min-width: 300px;
-    z-index: 1;
-    border-radius: 10px;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #000000;
-    border: 2px solid white;
-    border-radius: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-
-
-
-.header{
-    height: 3.5rem;
-    width: 100%;
-    /* border: 2px solid red; */
-    background-color: black;
-}
-
-.nav{
-    height: 100%;
-    width: 90%;
-    /* border: 2px solid rgb(43, 187, 67); */
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.logo{
-    height: 3rem;
-    margin-top: -2px;
-    display: flex;
-}
-.ulcontent {
-    list-style-type: none;
-    margin-left: 30px;
-    margin-top: -35px;
-  }
-.nav-btn{
-    display: flex;
-}
-.nav-btn a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.nav-item{
-    /* border: 2px solid red; */
-    margin-left: 6px;
-}
-.home-outline{
-    /* border: 2px solid white; */
-    margin-left: 50px;
-    margin-right: 20px;
-    padding: 5px 8px;
-    border-radius: 25px;
-    width: 70px;
-    background-color: white;
-    cursor: pointer;
-}
-.home-outline:hover{
-    transform: translate(0px, -3px);
-}
-
-.about-outline{
-    /* border: 2px solid white; */
-    margin-left: 0px;
-    margin-right: 20px;
-    padding: 5px 8px;
-    border-radius: 25px;
-    width: 70px;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-.about-outline:hover{
-    background-color: rgb(60, 60, 60);
-    transform: translate(0px, -3px);
-}
-.services-outline{
-    /* border: 2px solid white; */
-    margin-left: 0px;
-    margin-right: 20px;
-    padding: 5px 8px;
-    border-radius: 25px;
-    width: 100px;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-.services-outline:hover{
-    background-color: rgb(60, 60, 60);
-    transform: translate(0px, -3px);
-}
-
-.contact-outline{
-    /* border: 2px solid white; */
-    margin-left: 0px;
-    margin-right: 20px;
-    padding: 5px 8px;
-    border-radius: 25px;
-    width: 80px;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-.contact-outline:hover{
-    background-color: rgb(60, 60, 60);
-    transform: translate(0px, -3px);
-}
-
-.log {
-    list-style-type: none;
-    display: flex;
-    margin-top: 8px; /* Align items vertically centered */
-}
-
-.login-signup {
-    
-    text-decoration: none;
-    color: rgb(255, 255, 255); /* Set text color to white */
-    cursor: pointer;
-}
-.login-outline{
-    /* border: 2px solid white; */
-    padding: 5px 15px;
-    margin-right: 20px;
-    border-radius: 25px;
-    background-color: rgb(0, 0, 0);
-    margin-top: 2px;
-}
-
-.signup-outline{
-    /* border: 2px solid white; */
-    padding: 5px 15px;
-    margin-right: 2 0px;
-    border-radius: 25px;
-    background-color: rgb(0, 0, 0);
-    margin-top: 2px;
-}
-
-.login-outline:hover{
-    background-color: rgb(60, 60, 60);
-    transform: translate(0px, -3px);
-}
-
-.signup-outline:hover{
-    background-color: rgb(60, 60, 60);
-    transform: translate(0px, -3px);
-}
-
-/* ###################################################### BODY ################################################################ */
-.main-body{
-    background-image: url("../img/background.png");
-    height: 750px;
-    width: 100%;
-    position: relative;
-}
-
-.symptoms{
-    font-size: 5rem;
-    padding-top: 1.5em;
-    padding-left: 1em;
-}
-
-.symptoms-content{
-    font-size: 2rem;
-    padding-top: 0.5em;
-    padding-left: 2.5em;
-}
-.get-started{
-    height: 50px;
-    width: 240px;
-    /* border: 2px solid red; */
-    margin-top: 4em;
-    margin-left: 5em;
-    border-radius: 30px;
-    background-color: black;
-    color: white;
-    padding:4px 35px;
-    cursor: pointer;
-}
-.get-started a{
-    text-decoration: none;
-    color: white;
-}
-
-.get-started:hover{
-    transform: translate(0px, -3px);
-    background-color: rgb(52, 51, 51);
-}
-
-
-.emergency{
-    height: 50px;
-    width: 230px;
-    border: 2px solid rgba(0, 0, 0, 0);
-    right: 150px;
-    top: 50px;
-    border-radius: 30px;
-    background-color: rgb(8, 176, 174);
-    color: rgb(0, 0, 0);
-    padding:4px 35px;
-    cursor: pointer;
-    position: absolute;
-}
-.emergency a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.emergency:hover{
-    transform: translate(0px, -3px);
-    background-color: rgb(255, 0, 0);
-}
-      /* ########################################################### FOOTER ###################################################### */
-.footer{
-    height: 200px;
-    width: 100%;
-    /* border: 2px solid red; */
-    background-color: black;
-}
-.top{
-    height: 20%;
-    /* border: 2px solid blue; */
-    color: white;
-    display: flex;
-    
-}
-.top-left{
-    width: 50%;
-    /* border: 2px solid red; */
-}
-.top-right{
-    width: 50%;
-    /* border: 2px solid red; */
-    display: flex;
-    justify-content: right;
-}
-.connected{
-    font-weight: 200;
-    margin-left: 5em;
-    margin-top: 0.45em;
-}
-.bottom{
-    height: 67%;
-    /* border: 2px solid green; */
-    display: flex;
-}
-.terms{
-    height: 13%;
-    /* border: 2px solid blue; */
-}
-
-.media{
-    list-style-type: none;
-    display: flex;
-}
-.apps{
-    filter: invert(1);
-    margin-right: 40px;
-    margin-top: 7px;
-}
-.box{
-    width: 25%;
-    height: 100%;
-    /* border: 2px solid yellow; */
-    color: white;
-}
-.company{
-    font-weight: 400;
-    margin-top: 1em;
-    margin-left: 5em;
-    margin-bottom: 0.5rem;
-}
-.address{
-    
-    margin-left: 6em;
-    font-weight: 300;
-    line-height: 25px;
-}
-
-.links {
-    margin-left: 6em;
-    font-weight: 300;
-    line-height: 25px;
-}
-.box2 a{
-    color: white;
-}
-.policy{
-    list-style-type: none;
-    display: flex;
-    color: rgb(124, 124, 124);
-    justify-content: center;
-}
-.policy a{
-    color: rgb(124, 124, 124);
-    text-decoration: none;
-}
-
-     </style>
-    <!-- <link rel="stylesheet" href="{% static '../static/css/style.css' %}"> -->
-    <link href="../static/img/Group 130.png" rel="icon" />
-    <!-- <img src="{% static '../static/img/Group 130.png' %}" alt="My image"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static 'img/Group 130.png' %}" rel="icon" />
     <title>Symptoms checker</title>
 </head>
 <body>
-    <div class="header">
-      <div class="nav">
-        <div class="left-nav">
-            <img class="logo" src="../static/img/Group 130.png" alt="logo">
-            <ul class="nav-btn ulcontent">
-                <li><div class="home-outline"><a class="nav-item" style="color: black;" href="/w">Home</a></div></li>
-                <li><div class="about-outline"><a class="nav-item" href="/wabout">About</a></div></li>
-                <li class="dropdown">
-                    <div class="services-outline"><a class="nav-item" href="#" >Services &#9662;</a></div>
-                    <div class="dropdown-content">
-                        <a href="/wemergency">Emergency</a>
-                        <a href="/info">Symptom &rArr; Disease &rArr; Medicine</a>
-                        <a href="">Disease &rArr; Medicine</a>
-                        <a href="">Disease &rArr; Symptoms</a>
-                        <a href="/wbmi"> Calculate BMI</a>
-                        <a href="/wprecaution"> Precaution</a>
-                        <!-- Add more service links here -->
-                    </div>
-                </li>
-                <li><div class="contact-outline"><a class="nav-item" href="/wcontact">Contact</a></div></li>
-            </ul> 
-           </div>
-           <div class="right-nav">
-            <ul class="log">
-                <li class="user-dropdown">
-                    <div class="person-outline"><a class="user-nav-item" href="#" ><img src="../static/img/person.svg" alt=""></a></div>
-                    <div class="user-dropdown-content">
-                        <a href=""><img src="../static/img/edit_profile.svg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Edit Profile</a>
-                        <a href="/login"><img src="../static/img/logout.svg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
-                        <!-- Add more service links here -->
-                    </div>
-                </li>
-            </ul>
-           </div>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'img/Group 130.png' %}" alt="logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-dark mx-2" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark mx-2" href="/about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link btn btn-dark dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/emergency">Emergency</a></li>
+                            <li><a class="dropdown-item" href="/info">Symptom → Disease → Medicine</a></li>
+                            <li><a class="dropdown-item" href="#">Disease → Medicine</a></li>
+                            <li><a class="dropdown-item" href="#">Disease → Symptoms</a></li>
+                            <li><a class="dropdown-item" href="/bmi">Calculate BMI</a></li>
+                            <li><a class="dropdown-item" href="/precaution">Precaution</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark mx-2" href="/contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="{% static 'img/person.svg' %}" alt="Profile" height="24">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><img src="{% static 'img/edit_profile.svg' %}" alt="Edit" class="me-2">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="/login"><img src="{% static 'img/logout.svg' %}" alt="Logout" class="me-2">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-body position-relative">
+        <div class="container py-5">
+            <h1 class="display-1 fw-bold mb-4">
+                <span class="text-danger">Symptoms</span> Checker
+            </h1>
+            <h2 class="display-4 mb-5">
+                Use the <span class="text-danger">Symptoms</span> checker to find<br>
+                whats causing your symptoms.
+            </h2>
+            <div class="d-flex gap-4">
+                <a href="/info" class="btn btn-dark btn-lg px-5">Get Started</a>
+                <a href="/emergency" class="btn btn-info btn-lg px-5 position-absolute top-0 end-0 m-4">Emergency</a>
+            </div>
+        </div>
     </div>
 
-    <div class="main-body">
-       <div class="body-content">
-        <h1 class="symptoms"><span style="color: red;">Symptoms</span> Checker</h1>
-        <h2 class="symptoms-content">
-            Use the <span style="color: red;">Symptoms</span> checker to find <br>
-            whats causing your symptoms.
-        </h2>
-       </div>
-       <div class="get-started">
-        <a href="/info"><h1 class="get-btn">Get Started</h1></a>
-       </div>
-       <div class="emergency">
-        <a href="/wemergency"><h1 class="emergency-btn">Emergency</h1></a>
-       </div>
-    </div>
-    <div class="footer">
-        <div class="top">
-           <div class="top-left"> <h3 class="connected">Get Connected with us on social networks</h3>
-        </div>
-        <div class="top-right">
-            <ul class="media">
-                <li class="apps"><a href="https://www.facebook.com/profile.php?id=61557110111090"><img src="../static/img/facebook.svg" alt=""></a></li>
-                <li class="apps"><a href="https://youtube.com/@Symptomschecker-jc1gx?si=wsTd083cn_y8GjP3"><img src="../static/img/google.svg" alt=""></a></li>
-                <li class="apps"><a href="https://twitter.com/SymptomsC6028"><img src="../static/img/twitter.svg" alt=""></a></li>
-                <li class="apps"><a href="https://www.instagram.com/symptoms77777/"><img src="../static/img/instagram.svg" alt=""></a></li>
-                <li class="apps"><a href="https://www.linkedin.com/in/symptoms-checker-5a182a2ba/"><img src="../static/img/linkedin.svg" alt=""></a></li>
-            </ul>
-        </div>
-        </div>
-        <hr>
-        <div class="bottom">
-            <div class="box box1">
-                <h3 class="company">SYMPTOMS CHECKER</h3>
-                <h4 class="address">B14/10S Budhha park,<br>Kalyani 741235, west Bengal
-                </h4>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h5>Get Connected with us on social networks</h5>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="d-flex justify-content-end gap-3">
+                        <a href="https://www.facebook.com/profile.php?id=61557110111090" class="text-white"><img src="{% static 'img/facebook.svg' %}" alt="Facebook" class="social-icon"></a>
+                        <a href="https://youtube.com/@Symptomschecker-jc1gx?si=wsTd083cn_y8GjP3" class="text-white"><img src="{% static 'img/google.svg' %}" alt="YouTube" class="social-icon"></a>
+                        <a href="https://twitter.com/SymptomsC6028" class="text-white"><img src="{% static 'img/twitter.svg' %}" alt="Twitter" class="social-icon"></a>
+                        <a href="https://www.instagram.com/symptoms77777/" class="text-white"><img src="{% static 'img/instagram.svg' %}" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.linkedin.com/in/symptoms-checker-5a182a2ba/" class="text-white"><img src="{% static 'img/linkedin.svg' %}" alt="LinkedIn" class="social-icon"></a>
+                    </div>
+                </div>
             </div>
-            <div class="box box2">
-                <h3 class="company">USEFUL LINKS</h3>
-                
-                <a class="links" href="#">Orders</a><br>
-                <a class="links" href="#">Settings</a>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>SYMPTOMS CHECKER</h5>
+                    <p>B14/10S Budhha park,<br>Kalyani 741235, west Bengal</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>USEFUL LINKS</h5>
+                    <a href="#" class="text-white d-block">Orders</a>
+                    <a href="#" class="text-white d-block">Settings</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>CONTACT</h5>
+                    <p>info@example.com<br>
+                    +91 7598325876<br>
+                    +91 8753948538</p>
+                </div>
             </div>
-            <div class="box box3">
-                <h3 class="company">CONTACT</h3>
-                <h4 class="address">info@example.com <br>
-                    +91 7598325876 <br>
-                    +91 8753948538
-                </h4>
+            <div class="text-center mt-4">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="text-muted">Privacy policy</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-muted">Terms of use</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-muted">Advertisement Policy</a></li>
+                </ul>
             </div>
-            <div class="box box4"></div>
         </div>
-        <div class="terms">
-            <ul class="policy">
-                <li class="t&c"><a href="#">Privacy policy |</a></li>
-                <li class="t&c"><a href="#">&nbsp;Terms of use |</a></li>
-                <li class="t&c"><a href="#">&nbsp;Advertisement Policy</a></li>
-            </ul>
-        </div>
-    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

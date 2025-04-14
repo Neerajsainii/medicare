@@ -1,20 +1,33 @@
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth.decorators import login_required
-from django.conf.urls import handler404  
+from django.conf.urls import handler404
+from django.conf import settings
+from django.conf.urls.static import static
 from user import views
+
 urlpatterns = [
     # path("admin/", admin.site.urls),
     path("", views.home),
     path("info/", views.info),    
-    path('symptom/', views.symptom,name='symptom'),
+    path('symptom/', views.symptom, name='symptom'),
     path('disease/', views.process_symptom, name='disease'),
     path('get_suggestions/', views.get_suggestions, name='get_suggestions'),
-    path('get_symptoms/<int:disease_id>/', views.get_symptoms,name='get_symptoms'),
+    path('get_symptoms/<int:disease_id>/', views.get_symptoms, name='get_symptoms'),
     path('medicine/<int:disease_id>/', views.treatment, name='medicine'),
-    
-
+    path("about/", views.home, name="about"),
+    path("emergency/", views.home, name="emergency"),
+    path("contact/", views.home, name="contact"),
+    path("bmi/", views.home, name="bmi"),
+    path("precaution/", views.home, name="precaution"),
+    path("login/", views.home, name="login"),
 ]
+
+# Serve static files in development
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 # handler404 = 'Home.vieew.custom_404'
     
     
